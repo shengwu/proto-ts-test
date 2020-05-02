@@ -1,5 +1,8 @@
 #!/bin/bash
+
+set -e
 shopt -s nullglob
+
 for proto_file in *.proto; do
   name_without_extension="${proto_file%.*}"
   js_file_output=generated/$name_without_extension.js

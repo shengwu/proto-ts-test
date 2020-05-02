@@ -2,9 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import ListItem from './ListItem';
+import TodoList from './TodoList';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,14 +20,18 @@ function App() {
         >
           Learn React
         </a>
-        <ListItem
-          item={{
-            title: 'hello world',
-            blah: 'nope',
-          }} />
+        <TodoList
+          items={[
+            {
+              title: 'hello world',
+              comment: 'yup',
+              done: false,
+              toJSON: () => { return {} },
+            },
+          ]} />
       </header>
     </div>
   );
-}
+};
 
 export default App;
