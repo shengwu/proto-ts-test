@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import ListItem from './ListItem';
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +20,11 @@ function App() {
         >
           Learn React
         </a>
+        <ListItem
+          item={{
+            title: 'hello world',
+            blah: 'nope',
+          }} />
       </header>
     </div>
   );
