@@ -7,7 +7,10 @@ could use your git repo's code to automatically decode messages for you.
 # addl questions
 
 ## is there a good typescript generator for protobuf types and client and server code
-does it handle proto3 syntax (default value == empty) well?
+
+considerations:
+- does it handle proto3 syntax (default value == empty) well?
+- what is it actually sending over the wire - an actual binary encoded protobuf, or a JSON-encoded representation of a message?
 
 a few options:
 - https://github.com/googleapis/gapic-generator-typescript
@@ -15,8 +18,16 @@ a few options:
 - https://github.com/improbable-eng/ts-protoc-gen
 - https://github.com/protobufjs/protobuf.js
 - https://github.com/improbable-eng/grpc-web
+  - this requires specific libraries for both the browser and server - it really sends JSON over the wire, so if you're writing a go implementation of your grpc service, you'll have to use the grpc-web library to accept the JSON versions of the messages
+- https://github.com/agreatfool/grpc_tools_node_protoc_ts
 
 ## is there a good open source setup for typescript/react frontend and typescript backend
+
+
+# development
+
+test your changes:
+  yarn tsc
 
 
 # default create react app readme
