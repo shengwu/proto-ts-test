@@ -27,7 +27,8 @@ a few options:
 # development
 
 test your changes:
-  yarn tsc
+
+    yarn tsc
 
 
 # default create react app readme

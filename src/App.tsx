@@ -24,7 +24,6 @@ const App: React.FC = () => {
           items={[
             {
               title: 'hello world',
-              comment: 'yup',
               done: false,
               toJSON: () => { return {} },
             },
