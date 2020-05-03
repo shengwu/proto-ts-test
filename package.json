@@ -39,8 +39,10 @@
     "bundle": "webpack",
     "test": "react-scripts test",
     "start": "webpack-dev-server --mode development --open --hot",
+    "start-server": "node src/server.js",
     "build": "webpack --mode production",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"yarn start\" \"yarn start-server\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -58,6 +60,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^5.2.0",
     "webpack": "4.42.0"
   }
 }
