@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Item } from '../generated/todo';
+import { Item } from './generated/todo';
 
 const ListItem: React.FC<{ item: Item }> = ({ item }) => {
   return (

@@ -4,11 +4,11 @@ build: generate
 generate: protoc
 
 clean:
-	rm -rf generated/*
+	rm -rf src/generated
 	rm -rf dist
 
 protoc: clean
-	mkdir -p generated
+	mkdir -p src/generated
 	./proto_generate.sh
 
 # TODO: make this work

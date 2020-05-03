@@ -1,5 +1,5 @@
 *.sw?
-/generated
+/src/generated
 /dist
 /src/tsc-out
 

@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 set -e
+set -o xtrace
 shopt -s nullglob
 
-dest_dir=./generated
+dest_dir=./src/generated
 
 for proto_file in *.proto; do
   # protobufjs
@@ -18,6 +19,7 @@ for proto_file in *.proto; do
   #
   # https://github.com/grpc/grpc-node/issues/528#issuecomment-418959078
   node_modules/.bin/grpc_tools_node_protoc \
+    --js_out=import_style=commonjs,binary:$dest_dir \
     --grpc_out=$dest_dir \
     $proto_file
   protoc \
